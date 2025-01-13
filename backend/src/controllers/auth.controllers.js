@@ -31,13 +31,20 @@ export const signup = async (req, res) => {
 
     if (newUser) {
       //generate JWT Token
-      generateToken();
+      generateToken(newUser._id, res);
 
-      res
-        .status(200)
-        .json({ message: "User has been created successfully", error: false });
+      await newUser.save();
+
+      res.status(200).json({
+        _id: newUser._id,
+        fullName: newUser.fullName,
+        email: newUser.email,
+        profilPic: newUser.profilePic,
+        message: "User has been created successfully",
+        error: false,
+      });
     } else {
-      res.status(400).json({ message: "Internal Server issue ", error: true });
+      res.status(500).json({ message: "Internal Server issue ", error: true });
     }
   } catch (error) {
     console.log(error);
