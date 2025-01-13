@@ -82,6 +82,8 @@ export const login = async (req, res) => {
       fullName: user.fullName,
       email: user.email,
       profilePic: user.profilePic,
+      message: "User has been logged in successfully",
+      error: false,
     });
   } catch (error) {
     res.status(500).json({ message: "Internal Server Issue", error: true });
