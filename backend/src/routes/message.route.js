@@ -16,4 +16,5 @@ router.get("/:id", protectRoute, getMessages);
 
 //sending messages :
 router.post("/send/:id", protectRoute, sendMessage);
+
 export default router;
