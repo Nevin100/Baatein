@@ -13,19 +13,22 @@ import { useThemeStore } from "./store/useTheme.js";
 
 const App = () => {
   const { authUser, isCheckingAuth, checkAuth } = useAuthStore();
-  const theme = useThemeStore();
+  const { theme } = useThemeStore();
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
 
   console.log(authUser);
 
-  if (isCheckingAuth && !checkAuth) return;
-  <div className="flex items-center justify-center h-screen">
-    <Loader className="animate-spin size-10" />
-  </div>;
+  if (isCheckingAuth && !checkAuth) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader className="animate-spin size-10" />
+      </div>
+    );
+  }
   return (
-    <div data-theme="theme">
+    <div data-theme={theme}>
       <Navbar />
       <Routes>
         <Route
