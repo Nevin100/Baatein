@@ -27,6 +27,7 @@ const App = () => {
       </div>
     );
   }
+  //3:07:00
   return (
     <div data-theme={theme}>
       <Navbar />
