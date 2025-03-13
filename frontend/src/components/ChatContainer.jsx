@@ -1,9 +1,9 @@
-import { useChatStore } from "../store/useChatStore.js";
+import { useChatStore } from "../store/useChatStore";
 import { useEffect, useRef } from "react";
 
 import ChatHeader from "./ChatHeader.jsx";
 import MessageInput from "./MessageInput.jsx";
-import MessageSkeleton from "../components/skeltons/MessageSkelton.jsx";
+import MessageSkeleton from "./skeltons/MessageSkelton.jsx";
 import { useAuthStore } from "../store/useAuthStore.js";
 import { formatMessageTime } from "../lib/utilis.js";
 
@@ -16,7 +16,6 @@ const ChatContainer = () => {
     subscribeToMessages,
     unsubscribeFromMessages,
   } = useChatStore();
-
   const { authUser } = useAuthStore();
   const messageEndRef = useRef(null);
 
