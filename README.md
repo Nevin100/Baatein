@@ -19,3 +19,5 @@ Baatein is a responsive, real-time chat application designed for seamless commun
 
 ## 🌐 Deployment
 The application is fully deployed and accessible online.
+
+Do check it out 😁 😉 
