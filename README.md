@@ -1,6 +1,6 @@
 # 🗨️ Baatein - Chat Like Never Before 💬⚡
 
-> _Talk it out. Type it up. Baatein it!_
+> _Talk it out. Type it up. Baatein kro!!_
 
 Welcome to **Baatein** — the slickest, cleanest, and most *extra* chat app you’ll ever need.  
 Forget boring UI and clunky messages... this bad boy has it ALL. 🔥
